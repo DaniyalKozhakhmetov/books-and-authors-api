@@ -1,0 +1,13 @@
+com/task/books_and_authors_api/domain/Book.class
+com/task/books_and_authors_api/entity/AuthorsEntity.class
+com/task/books_and_authors_api/entity/BookEntity.class
+com/task/books_and_authors_api/service/impl/BookServiceImpl.class
+com/task/books_and_authors_api/service/BookService.class
+com/task/books_and_authors_api/web/controllers/AuthorController.class
+com/task/books_and_authors_api/web/controllers/BookController.class
+com/task/books_and_authors_api/repository/AuthorsRepository.class
+com/task/books_and_authors_api/repository/BookRepository.class
+com/task/books_and_authors_api/BooksAndAuthorsApiApplication.class
+com/task/books_and_authors_api/service/impl/AuthorServiceImpl.class
+com/task/books_and_authors_api/domain/Authors.class
+com/task/books_and_authors_api/service/AuthorService.class

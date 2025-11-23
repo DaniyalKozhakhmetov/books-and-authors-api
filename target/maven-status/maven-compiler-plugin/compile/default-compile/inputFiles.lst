@@ -1,0 +1,13 @@
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/BooksAndAuthorsApiApplication.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/domain/Authors.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/domain/Book.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/entity/AuthorsEntity.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/entity/BookEntity.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/repository/AuthorsRepository.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/repository/BookRepository.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/service/AuthorService.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/service/BookService.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/service/impl/AuthorServiceImpl.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/service/impl/BookServiceImpl.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/web/controllers/AuthorController.java
+/Users/daniyalkozhakhmetov/Desktop/books-and-authors-api/src/main/java/com/task/books_and_authors_api/web/controllers/BookController.java
