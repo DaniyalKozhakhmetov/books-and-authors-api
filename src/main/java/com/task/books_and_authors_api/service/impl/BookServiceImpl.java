@@ -64,6 +64,7 @@ public class BookServiceImpl implements BookService { // реализация б
     public BookRequestDto editBookInfo(Long id, BookRequestDto book) {
         BookEntity entity = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
+        if(book.price() < 0) throw new IllegalArgumentException("Price must be positive");
         log.info("Book id = {} has been updated", id);
         entity.setTitle(book.title());
         entity.setPrice(book.price());
