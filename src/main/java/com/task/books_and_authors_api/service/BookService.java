@@ -1,7 +1,7 @@
 package com.task.books_and_authors_api.service;
 
-import com.task.books_and_authors_api.web.controllers.BookRequestDto;
-import com.task.books_and_authors_api.web.controllers.BookRespondDto;
+import com.task.books_and_authors_api.web.dto.BookRequestDto;
+import com.task.books_and_authors_api.web.dto.BookRespondDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,9 +13,9 @@ public interface BookService { //сервис книг
 
     List<BookRespondDto> getAllBooks(); //список всех книг с авторами
 
-    BookRequestDto addNewBook(BookRequestDto book); // новая книга
+    BookRespondDto addNewBook(BookRequestDto book); // новая книга
 
-    BookRequestDto editBookInfo(Long id, BookRequestDto book); // изменение книги
+    BookRespondDto editBookInfo(Long id, BookRequestDto book); // изменение книги
 
     void deleteBookById(Long id); // удаление книги
 }

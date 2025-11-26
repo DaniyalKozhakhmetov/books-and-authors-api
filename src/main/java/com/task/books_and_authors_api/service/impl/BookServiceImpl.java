@@ -5,8 +5,8 @@ import com.task.books_and_authors_api.entity.BookEntity;
 import com.task.books_and_authors_api.repository.AuthorsRepository;
 import com.task.books_and_authors_api.repository.BookRepository;
 import com.task.books_and_authors_api.service.BookService;
-import com.task.books_and_authors_api.web.controllers.BookRequestDto;
-import com.task.books_and_authors_api.web.controllers.BookRespondDto;
+import com.task.books_and_authors_api.web.dto.BookRequestDto;
+import com.task.books_and_authors_api.web.dto.BookRespondDto;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -45,8 +45,7 @@ public class BookServiceImpl implements BookService { // реализация б
     }
 
     @Override
-    public BookRequestDto addNewBook(BookRequestDto book) {
-        if(book.price() < 0) throw new IllegalArgumentException("Price must be positive");
+    public BookRespondDto addNewBook(BookRequestDto book) {
         AuthorsEntity author = authorsRepository.findById(book.authorId())
                 .orElseThrow(() -> new RuntimeException("Author not found"));
 
@@ -57,21 +56,20 @@ public class BookServiceImpl implements BookService { // реализация б
                 book.publishDate(),
                 author);
         BookEntity savedEntity = repository.save(entity);
-        return BookRequestDto.fromEntity(savedEntity);
+        return BookRespondDto.fromEntity(savedEntity);
     }
 
     @Override
-    public BookRequestDto editBookInfo(Long id, BookRequestDto book) {
+    public BookRespondDto editBookInfo(Long id, BookRequestDto book) {
         BookEntity entity = repository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Book not found"));
-        if(book.price() < 0) throw new IllegalArgumentException("Price must be positive");
         log.info("Book id = {} has been updated", id);
         entity.setTitle(book.title());
         entity.setPrice(book.price());
         entity.setPublishDate(book.publishDate());
         entity.setAuthorId(book.authorId());
         BookEntity savedEntity = repository.save(entity);
-        return BookRequestDto.fromEntity(savedEntity);
+        return BookRespondDto.fromEntity(savedEntity);
     }
 
     @Override
