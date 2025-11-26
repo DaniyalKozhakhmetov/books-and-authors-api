@@ -1,13 +1,14 @@
-package com.task.books_and_authors_api.web.controllers;
+package com.task.books_and_authors_api.web.dto;
 
 import com.task.books_and_authors_api.entity.BookEntity;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 public record BookRespondDto(
         Long Id,
         String title,
-        Integer price,
+        BigDecimal price,
         LocalDate publishDate,
         String authorName,
         LocalDate authorBirthDate

@@ -1,7 +1,10 @@
 package com.task.books_and_authors_api.web.controllers;
 
 import com.task.books_and_authors_api.service.BookService;
+import com.task.books_and_authors_api.web.dto.BookRequestDto;
+import com.task.books_and_authors_api.web.dto.BookRespondDto;
 import org.springframework.web.bind.annotation.*;
+import jakarta.validation.Valid;
 
 import java.util.List;
 
@@ -25,12 +28,12 @@ public class BookController {
     }
 
     @PostMapping
-    public BookRequestDto addNewBook(@RequestBody BookRequestDto book){
+    public BookRespondDto addNewBook( @Valid @RequestBody BookRequestDto book){
         return service.addNewBook(book);
     }
 
     @PutMapping("/{id}")
-    public BookRequestDto updateBook(@PathVariable Long id, @RequestBody BookRequestDto book){
+    public BookRespondDto updateBook(@PathVariable Long id,  @Valid @RequestBody BookRequestDto book){
         return service.editBookInfo(id, book);
     }
 

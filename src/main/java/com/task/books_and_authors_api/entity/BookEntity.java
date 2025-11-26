@@ -2,6 +2,7 @@ package com.task.books_and_authors_api.entity;
 
 import jakarta.persistence.*;
 
+import java.math.BigDecimal;
 import java.time.LocalDate;
 
 @Table(name = "book_entity")
@@ -15,7 +16,7 @@ public class BookEntity {
     private String title;
 
     @Column(nullable = false)
-    private Integer price;
+    private BigDecimal price;
 
     @Column
     private LocalDate publishDate;
@@ -27,7 +28,7 @@ public class BookEntity {
     public BookEntity(){
     }
 
-    public BookEntity(String title, Integer price, LocalDate publishDate, AuthorsEntity author) {
+    public BookEntity(String title, BigDecimal price, LocalDate publishDate, AuthorsEntity author) {
         this.title = title;
         this.price = price;
         this.publishDate = publishDate;
@@ -50,11 +51,11 @@ public class BookEntity {
         this.title = title;
     }
 
-    public Integer getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
